@@ -22,6 +22,11 @@ public class IndexController {
 	public String index(Model model,HttpServletRequest request){
 		List<User> list = userMapper.getList();
 		model.addAttribute("userList", list);
+		
+		/*QueryFilter filter = new QueryFilter();
+		filter.put("username", "096");
+		User user = userMapper.getUserByUsername(filter);*/
+		
 		return "index";
 	}
 	

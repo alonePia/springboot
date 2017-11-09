@@ -11,4 +11,9 @@
 	<select id="getList" resultType="com.hotv.springboot.entity.User">
 		SELECT * FROM user 
 	</select>
+	
+	<!--根据username获取用户 主要是使用QueryFilter -->
+	<select id="getUserByUsername" parameterType="filter" resultType="com.hotv.springboot.entity.User">
+		SELECT * FROM user where username = #{username}
+	</select>
 </mapper>

@@ -5,6 +5,7 @@ import java.util.List;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
+import com.hotv.springboot.core.QueryFilter;
 import com.hotv.springboot.entity.User;
 
 /**
@@ -28,5 +29,13 @@ public interface UserMapper {
 	 * @return
 	 */
 	List<User> getList();
+	
+
+	/**
+	 * 根据username获取用户 主要是使用QueryFilter
+	 * @param userId
+	 * @return
+	 */
+	User getUserByUsername(QueryFilter filter);
 	
 }
