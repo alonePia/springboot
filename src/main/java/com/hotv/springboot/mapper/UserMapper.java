@@ -38,4 +38,16 @@ public interface UserMapper {
 	 */
 	User getUserByUsername(QueryFilter filter);
 	
+	/**
+	 * 新增
+	 * @param user
+	 */
+	void insert(User user);
+	
+	/**
+	 * 删除
+	 * @param filter
+	 */
+	void delete(QueryFilter filter);
+	
 }

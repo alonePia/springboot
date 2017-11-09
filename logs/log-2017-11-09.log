@@ -1,0 +1,13 @@
+2017-11-09 22:16:08 [DEBUG] [org.apache.ibatis.logging.jdbc.BaseJdbcLogger:159] - ==>  Preparing: SELECT * FROM user 
+2017-11-09 22:16:08 [DEBUG] [org.apache.ibatis.logging.jdbc.BaseJdbcLogger:159] - ==> Parameters: 
+2017-11-09 22:16:08 [DEBUG] [org.apache.ibatis.logging.jdbc.BaseJdbcLogger:159] - <==      Total: 2
+2017-11-09 22:16:08 [DEBUG] [org.apache.ibatis.logging.jdbc.BaseJdbcLogger:159] - ==>  Preparing: SELECT * FROM user where username = ? 
+2017-11-09 22:16:08 [DEBUG] [org.apache.ibatis.logging.jdbc.BaseJdbcLogger:159] - ==> Parameters: 096(String)
+2017-11-09 22:16:08 [DEBUG] [org.apache.ibatis.logging.jdbc.BaseJdbcLogger:159] - <==      Total: 1
+2017-11-09 22:16:08 [DEBUG] [com.hotv.springboot.controller.IndexController:32] - IndexController index getUserByUsername:2,096,上海市嘉定区
+2017-11-09 22:16:08 [DEBUG] [org.apache.ibatis.logging.jdbc.BaseJdbcLogger:159] - ==>  Preparing: delete from user where userid=? 
+2017-11-09 22:16:08 [DEBUG] [org.apache.ibatis.logging.jdbc.BaseJdbcLogger:159] - ==> Parameters: 2(Long)
+2017-11-09 22:16:08 [DEBUG] [org.apache.ibatis.logging.jdbc.BaseJdbcLogger:159] - <==    Updates: 1
+2017-11-09 22:16:08 [DEBUG] [org.apache.ibatis.logging.jdbc.BaseJdbcLogger:159] - ==>  Preparing: INSERT INTO user (username,address) VALUES (?, ?) 
+2017-11-09 22:16:08 [DEBUG] [org.apache.ibatis.logging.jdbc.BaseJdbcLogger:159] - ==> Parameters: alone(String), 北京市密云县(String)
+2017-11-09 22:16:08 [DEBUG] [org.apache.ibatis.logging.jdbc.BaseJdbcLogger:159] - <==    Updates: 1
