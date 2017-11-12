@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hotv.springboot.mapper.SysUserMapper">
+	<!-- <resultMap id="BaseResultMap" type="com.hotv.springboot.entity.SysUser">
+		<result column="user_id" property="userId" />
+		<result column="username" property="username" />
+		<result column="password" property="password" />
+	</resultMap> -->
+	
+	<!--新增 -->
+	<insert id="insert" parameterType="com.hotv.springboot.entity.SysUser" >
+       INSERT INTO 
+            sys_user
+            (username,password) 
+        VALUES
+            (#{username}, #{password})
+    </insert>
+	
+	<!--删除 -->
+	<delete id="delete" parameterType="filter" >
+       delete from 
+            sys_user
+       where userid=#{userId}
+    </delete>
+    
+	<!--根据id查询用户详情 -->
+	<select id="getUserById" parameterType="string" resultType="com.hotv.springboot.entity.SysUser">
+		SELECT * FROM sys_user WHERE userId=#{userId}
+	</select>
+	
+	<!--获取用户列表 -->
+	<select id="list" resultType="com.hotv.springboot.entity.SysUser">
+		SELECT * FROM sys_user 
+	</select>
+	
+	<!--根据username获取用户 主要是使用QueryFilter -->
+	<select id="getUserByUsername" parameterType="filter" resultType="com.hotv.springboot.entity.SysUser">
+		SELECT * FROM sys_user where username = #{username}
+	</select>
+	
+	<!--登录 -->
+	<!-- 查询条件只能带入username password为带入 需处理 -->
+	<select id="login" parameterType="com.hotv.springboot.entity.SysUser" resultType="com.hotv.springboot.entity.SysUser">
+		SELECT * FROM sys_user where username = #{username} AND password = #{password}
+	</select>
+	
+</mapper>

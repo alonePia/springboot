@@ -2,10 +2,15 @@ package com.hotv.springboot.entity;
 
 /**
  * 用户
+ * 
  * @author hotv
- *
+ * @since 2017-11-11
  */
-public class User {
+public class SysUser {
+	
+	public SysUser(){}
+	
+	public SysUser(String username,String password){}
 
 	/**
 	 * userId
@@ -18,9 +23,9 @@ public class User {
 	private String username;
 
 	/**
-	 * 地址
+	 * 登录密码
 	 */
-	private String address;
+	private String password;
 
 	/**
 	 * userId
@@ -45,14 +50,14 @@ public class User {
 	}
 
 	/**
-	 * 地址
+	 * 登录密码
 	 */
-	public String getAddress() {
-		return address;
+	public String getPassword() {
+		return password;
 	}
 
-	public void setAddress(String address) {
-		this.address = address;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
 }

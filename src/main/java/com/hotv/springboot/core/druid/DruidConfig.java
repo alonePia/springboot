@@ -1,4 +1,4 @@
-package com.hotv.springboot.core;
+package com.hotv.springboot.core.druid;
 
 import javax.sql.DataSource;
 
