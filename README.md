@@ -1,4 +1,4 @@
-# springboot-1.5.8+freemarker+mybatis+logback+shiro
+# springboot-1.5.8+freemarker+mybatis+mysql+logback+shiro
 
 # @author hotv
 # Eclipse Mars.2
